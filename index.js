@@ -40,66 +40,66 @@ function init() {
     inquirer
     prompt([
         {
-            type: "input"
-            name: "github"
-            message: "What is your GitHub username?"
+            type: 'input'
+            name: 'github'
+            message: 'What is your GitHub username?'
         }
         {
-            type: "input"
-            name: "email"
-            message: "What is your email address?"
+            type: 'input'
+            name: 'email'
+            message: 'What is your email address?'
         }
         {
-            type: "input"
-            name: "project title"
-            message: "What is your project title?"
+            type: 'input'
+            name: 'project title'
+            message: 'What is your project title?'
         }
         {
-            type: "input"
-            name: "description"
-            message: "Provide a short description providing the what, why, and how of your project."
+            type: 'input'
+            name: 'description'
+            message: 'Provide a short description providing the what, why, and how of your project.'
         }
         {
-            type: "input"
-            name: "instalation"
-            message: "Please provide instructions on how to install your product."
-            default: "npm i"
+            type: 'input'
+            name: 'instalation'
+            message: 'Please provide instructions on how to install your product.'
+            default: 'npm i'
         }
         {
-            type: "input"
-            name: "usage"
-            message: "Provide instructions and examples for use."
+            type: 'input'
+            name: 'usage'
+            message: 'Provide instructions and examples for use.'
         }
-            type: "input"
-            name: "screenshot"
-            message: "Have you provided an image in the assets/images folder?"
-            choices: ["Yes", "No"]
+            type: 'input'
+            name: 'screenshot'
+            message: 'Have you provided an image in the assets/images folder?'
+            choices: ['Yes', 'No']
         {
-            type: "input"
-            name: "credits"
-            message: "List your collaborators with links to their GitHub profile."
-        }
-        {
-            type: "checkbox"
-            name: "license"
-            message: "Please select the appropriate license."
-            choices: ["IBM", "ISC", "MIT", "Mozilla", "WTFPL"]
+            type: 'input'
+            name: 'credits'
+            message: 'List your collaborators with links to their GitHub profile.'
         }
         {
-            type: "input"
-            name: "badges"
-            message: "Would you like to include a badge for your license selection?"
-            choices: ["Yes", "No"]
+            type: 'checkbox'
+            name: 'license'
+            message: 'Please select the appropriate license.'
+            choices: ['IBM', 'ISC', 'MIT', 'Mozilla', 'WTFPL']
         }
         {
-            type: "input"
-            name: "features"
-            message: "List any important features."
+            type: 'input'
+            name: 'badges'
+            message: 'Would you like to include a badge for your license selection?'
+            choices: ['Yes', 'No']
+        }
+        {
+            type: 'input'
+            name: 'features'
+            message: 'List any important features.'
         }
     ])
     .then(function(data){
         console.log(data);
-        fs.writeFile("README2.md", convertToMarkdown(data), () => console.log("Written to File.");
+        fs.writeFile('README-TEMPLATE.md', convertToMarkdown(data), () => console.log('Written to File.');
     })
 };
 

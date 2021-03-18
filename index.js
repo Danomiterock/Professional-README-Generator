@@ -1,7 +1,31 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+//require file system package
 const fs = require('fs');
+//import utilities module
 const util = require('util')
+// Use promisify to convert callback 
+// based method fs.readdir to  
+// promise based method 
+const readdir = util.promisify(fs.readdir) 
+   
+const readFiles = async (path) => { 
+    const files = await readdir(path) 
+    console.log(files) 
+  } 
+   
+  readFiles(process.cwd()).catch(err => { 
+    console.log(err) 
+  }) 
+//create object for licensee badges
+const badges = {
+    IBM: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)',
+    ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+    MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    Mozilla: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+    WTFPL: '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)'
+
+}
 
 // TODO: Create an array of questions for user input
 const questions = [];
@@ -49,7 +73,7 @@ function init() {
             type: "checkbox"
             name: "licenses"
             message: "Please select the appropriate license."
-            choices: ["Apache", "Boost", "BSD", "Creative Commons", "Eclipse", "IBM", "ISC", "MIT", "Mozilla", "Open Data Commons", "Perl", "SIL", "Unlicense", "WTFPL", "Zlib"]
+            choices: ["IBM", "ISC", "MIT", "Mozilla", "WTFPL"]
         }
         {
             type: "input"

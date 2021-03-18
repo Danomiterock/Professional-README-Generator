@@ -1,9 +1,9 @@
 # Dan's project
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+${data.badge}
 ​
 ## Description
-​
-lkajdlfkjasldkfjasdf
+
+${data.description}
 ​
 ## Table of Contents 
 ​
@@ -29,15 +29,16 @@ npm i
 ​
 ## Usage
 ​
-lkajsdlfkjasdlkfjaklsdjflkasdjflkasjdf
+${data.usage}
+${data.screenshot}
 ​
 ## License
 ​
-This project is licensed under the MIT license.
+${data.license}
   
 ## Contributing
 ​
-
+${data.credits}
 ​
 ## Tests
 ​
@@ -49,7 +50,7 @@ npm test
 ​
 ## Questions
 ​
-If you have any questions about the repo, open an issue or contact me directly at ${}. You can find more of my work at [](https://github.com/${}/).
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [](https://github.com/${data.github}/).
 ​
 Collapse
 

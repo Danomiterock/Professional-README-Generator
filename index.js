@@ -63,7 +63,17 @@ function init() {
             type: "input"
             name: "instalation"
             message: "Please provide instructions on how to install your product."
+            default: "npm i"
         }
+        {
+            type: "input"
+            name: "usage"
+            message: "Provide instructions and examples for use."
+        }
+            type: "input"
+            name: "screenshot"
+            message: "Have you provided an image in the assets/images folder?"
+            choices: ["Yes", "No"]
         {
             type: "input"
             name: "credits"
@@ -71,7 +81,7 @@ function init() {
         }
         {
             type: "checkbox"
-            name: "licenses"
+            name: "license"
             message: "Please select the appropriate license."
             choices: ["IBM", "ISC", "MIT", "Mozilla", "WTFPL"]
         }
@@ -79,6 +89,7 @@ function init() {
             type: "input"
             name: "badges"
             message: "Would you like to include a badge for your license selection?"
+            choices: ["Yes", "No"]
         }
         {
             type: "input"

@@ -87,7 +87,8 @@ const questions = [
 					link: 'MIT',
 					url: 'https://opensource.org/licenses/MIT',
 					color: 'yellow',
-			},    
+			}, 
+        },   
             {
                 name: 'IBM',
                 value: {
@@ -96,6 +97,7 @@ const questions = [
                     url: 'https://opensource.org/licenses/IPL-1.0',
                     color: 'blue',
             },
+        },
             {
                 name: 'Mozilla',
                 value: {
@@ -103,7 +105,8 @@ const questions = [
                     link: 'Mozilla',
                     url: 'https://opensource.org/licenses/MPL-2.0',
                     color: 'brightgreen',
-            },          
+            },  
+        },        
         ],
         },
     {

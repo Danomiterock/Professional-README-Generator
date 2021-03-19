@@ -21,15 +21,6 @@ const readFiles = async (path) => {
   readFiles(process.cwd()).catch(err => { 
     console.log(err) 
   }) 
-//create object for licensee badges
-const badges = {
-    IBM: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)',
-    ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-    MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-    Mozilla: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
-    WTFPL: '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)'
-
-}
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -64,12 +55,6 @@ const questions = [
         name: 'usage',
         message: 'Provide instructions and examples for use.',
     },
-    {
-        type: 'list',
-        name: 'screenshot',
-        message: 'Have you provided an image in the assets/images folder?',
-        choices: ['Yes', 'No'],
-    },    
     {
         type: 'input',
         name: 'credits',

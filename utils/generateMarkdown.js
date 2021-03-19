@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
  
-![License](https://img.shields.io/badge/license-${data.license}-blue.svg)
+[![License](https://img.shields.io/badge/license-${data.license}-${data.license.color}.svg)](${data.license.url})
 ​
 ## Description
 ​
@@ -45,7 +45,7 @@ npm i
 ## Usage
 ​
 ${data.usage}
-${data.screenshot}
+![Banner](assets/images/screenshot.jpg)
 ​
 ## License
 ​
@@ -65,7 +65,7 @@ npm test
 ​
 ## Questions
 ​
-If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [tuckerbeauchamp](https://github.com/${data.github}/).
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}/).
 
 `;
 }

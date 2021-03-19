@@ -79,14 +79,33 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Please select the appropriate license.',
-        choices: ['IBM', 'ISC', 'MIT', 'Mozilla', 'WTFPL'],
-    },
-    {
-        type: 'list',
-        name: 'badges',
-        message: 'Would you like to include a badge for your license selection?',
-        choices: ['Yes', 'No']
-    },
+        choices: [
+            {
+				name: 'MIT',
+				value: {
+					name: 'MIT',
+					link: 'MIT',
+					url: 'https://opensource.org/licenses/MIT',
+					color: 'yellow',
+			},    
+            {
+                name: 'IBM',
+                value: {
+                    name: 'IBM',
+                    link: 'IBM',
+                    url: 'https://opensource.org/licenses/IPL-1.0',
+                    color: 'blue',
+            },
+            {
+                name: 'Mozilla',
+                value: {
+                    name: 'Mozilla',
+                    link: 'Mozilla',
+                    url: 'https://opensource.org/licenses/MPL-2.0',
+                    color: 'brightgreen',
+            },          
+        ],
+        },
     {
         type: 'input',
         name: 'features',
